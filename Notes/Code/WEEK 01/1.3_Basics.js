@@ -28,7 +28,7 @@ console.log('3'*'4');   //Convert back to numbers and do the operation
 console.log("\n\nLoose Equality\n")
 console.log(3==3);
 console.log(3==4);
-console.log('3'==3);    //Converts Bothe to any of the type and gives result
+console.log('3'==3);    //Converts Both to any of the type and gives result
 
 console.log("\n\nStrict Equality\n")
 console.log('3'===3);
