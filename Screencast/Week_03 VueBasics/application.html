@@ -10,8 +10,8 @@
         <div id="app">
             <P>{{ message }}</P>
             Your Name:<input type="text" v-model="visitor_name"/>
-            <p v-if="count==0">No Replies Yet</p>
-            <p v-else-if="count>5">You are Very Popular</p>
+            <p v-if="counting==0">No Replies Yet</p>
+            <p v-else-if="counting>5">You are Very Popular</p>
             <p v-else>Number of Replies {{counting}}</p>
 
             <button v-on:click="sayHi">Say Hi</button>
