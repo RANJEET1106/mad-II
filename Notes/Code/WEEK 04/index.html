@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width , initial-scale=1">
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.7.16/dist/vue.js"></script> 
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+        <title>Vue Test</title>
+    </head>
+    <body>
+        <div id="app">
+            <div>
+                Message :{{message}}
+            </div>
+            <div>
+                <input v-model="message"/> <!-- Binds the input value to the message variable from the Model -->
+            </div>
+                <p v-bind:title="message">Hover Over This Paragraph</p>  <!--We Can Use message as the title of the paragraph  -->
+                <button @click="updateMsg">update message</button>
+                <div v-bind:class='message'>This is a test message for checking classes</div>  
+                <h1 v-show="message==='Hello'">Shows only when argument evaluates is true</h1> <!-- Display only if message is hello  -->
+                <h2>Some Responsive Text</h2>
+                <div> {{msg2}}</div>
+                <h2>Some More Responsive Text</h2>
+                <div>{{msg3}}</div>
+                <span v-bind:style="{fontSize:myFontSize }">Does this change ???</span>
+
+                <h2>And The Loop:</h2>
+                <ul>
+                    <li v-for="(x,i) in message">
+                        {{i}} - {{x}}
+                    </li>
+                </ul>
+        </div>
+    <script src="./vue-test.js"></script>
+    </body>
+</html>
